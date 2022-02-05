@@ -1,0 +1,43 @@
+.method {
+  & > img {
+    position: absolute;
+    z-index: -1;
+    top: -250px;
+    left: 5%;
+  }
+  position: relative;
+
+  padding: 46px 0 130px 0;
+  min-height: 825px;
+  height: var(--app-height);
+  &__grid {
+  }
+  &__grid-link {
+  }
+  &__right {
+  }
+  &__text-big {
+    margin: 50px 0 90px 0;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 196px;
+    line-height: 94.5%;
+
+    color: #ffffff;
+  }
+  &__descr {
+    max-width: 688px;
+    margin-bottom: 220px;
+  }
+  &__innovation {
+    max-width: 466px;
+    margin-right: 0;
+    margin-left: auto;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 120%;
+
+    color: #fff;
+    text-indent: 100px;
+  }
+}

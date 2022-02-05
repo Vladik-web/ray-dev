@@ -1,21 +1,18 @@
 .first-block {
   padding-top: 35px;
-  min-height: 800px;
-  height: 100vh;
-  border: 1px solid red;
+  margin-bottom: 54px;
+  min-height: 825px;
+  height: var(--app-height);
+
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   &__navigation {
+    z-index: 100;
     position: fixed;
     bottom: 175px;
     left: 35px;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 22px;
-
-    color: #ffffff;
   }
   &__text {
     max-width: 308px;

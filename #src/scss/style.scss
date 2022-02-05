@@ -5,5 +5,26 @@
 @import "base.scss";
 
 /* components */
+@import "components/grid.scss";
+@import "components/line.scss";
+
 @import "components/first-block.scss";
+
 @import "components/header.scss";
+@import "components/mission.scss";
+@import "components/ticker.scss";
+@import "components/about-us.scss";
+@import "components/team.scss";
+@import "components/product.scss";
+
+/*start Slider */
+//
+//
+//
+/*end Slider */
+@import "components/applying.scss";
+@import "components/method.scss";
+@import "components/create.scss";
+@import "components/form.scss";
+@import "components/checkbox.scss";
+@import "components/footer.scss";

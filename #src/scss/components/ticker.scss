@@ -1,0 +1,22 @@
+.ticker {
+  padding-bottom: 89px;
+  h2 {
+    font-weight: 300;
+    font-size: 100px;
+    line-height: 76.5%;
+    white-space: nowrap;
+    color: #ffffff;
+    margin-bottom: 12px;
+  }
+  span {
+    white-space: nowrap;
+    font-weight: 300;
+    font-size: 45px;
+    line-height: 96%;
+
+    color: #ffffff;
+  }
+  &-last {
+    padding-bottom: 104px;
+  }
+}

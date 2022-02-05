@@ -1,0 +1,44 @@
+.create {
+  padding-bottom: 203px;
+  &__grid-link {
+  }
+  &__wrapper {
+    padding: 170px 0 137px 0;
+  }
+  &__link-big {
+    margin: 0 auto;
+
+    width: 540px;
+    height: 540px;
+    background-color: $accent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 45px;
+    line-height: 100%;
+    text-align: center;
+    color: #ffffff;
+  }
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    &-left {
+      flex: 1 1 50%;
+      h3 {
+        max-width: 703px;
+        font-weight: 300;
+        font-size: 60px;
+        line-height: 90%;
+
+        text-indent: 226px;
+
+        color: #ffffff;
+      }
+    }
+    &-right {
+      flex: 1 1 50%;
+    }
+  }
+}

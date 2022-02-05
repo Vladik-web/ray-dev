@@ -1,0 +1,29 @@
+.about-us {
+  position: relative;
+
+  padding-top: 76px;
+  padding-bottom: 125px;
+
+  min-height: 825px;
+  &__block {
+    grid-column: 3/-1;
+    max-width: 703px;
+  }
+  &__content {
+    margin-bottom: 213px;
+  }
+  &__text {
+    grid-column: 2/-1;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 100%;
+    max-width: 1024px;
+    color: #ffffff;
+  }
+  &__title {
+    margin-bottom: 55px;
+  }
+  &__right {
+    max-width: 703px;
+  }
+}

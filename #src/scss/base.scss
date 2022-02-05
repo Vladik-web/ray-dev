@@ -1,6 +1,10 @@
+:root {
+  --app-height: 100%;
+}
 body {
   font-family: "HeliosExtLightC";
   background-color: $bg;
+  overflow-x: hidden;
 }
 a {
   color: inherit;
@@ -10,4 +14,64 @@ a {
 }
 .container {
   padding: 0 35px;
+  position: relative;
+}
+.fixed-link {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #ffffff;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+.fixed-link-once {
+  position: absolute;
+  top: 0;
+  left: 35px;
+}
+.title {
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 100%;
+  text-indent: 226px;
+  color: #ffffff;
+}
+.content {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 120%;
+  color: #ffffff;
+}
+main {
+  position: relative;
+  height: fit-content;
+  &::before {
+    content: "";
+
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    //width: 1389px;
+    height: 2096px;
+    background: url(../img/Fon_section.png) no-repeat right;
+  }
+}
+.head {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 100px;
+  line-height: 94.5%;
+
+  color: #ffffff;
+}
+.descr {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 120%;
+  color: #ffffff;
 }

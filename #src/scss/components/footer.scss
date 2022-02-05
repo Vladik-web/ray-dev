@@ -1,0 +1,31 @@
+.footer {
+  padding-bottom: 115px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 55px;
+    }
+  }
+  &__link {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+
+    color: #707070;
+  }
+  &__cop {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+
+    color: #707070;
+  }
+}

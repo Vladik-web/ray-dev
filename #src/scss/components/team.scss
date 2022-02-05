@@ -1,0 +1,32 @@
+.team {
+  padding: 75px 0 54px 0;
+
+  min-height: 825px;
+  &__grid {
+  }
+  &__grid-link {
+  }
+  &__about {
+    margin-top: 159px;
+  }
+  &__about-name {
+    font-weight: 300;
+    font-size: 45px;
+    line-height: 100%;
+    color: #ffffff;
+    margin-bottom: 60px;
+  }
+  &__about-work {
+    display: block;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 120%;
+    color: #ffffff;
+    margin-bottom: 50px;
+  }
+  &__right {
+  }
+  &__head {
+    margin-bottom: 40px;
+  }
+}

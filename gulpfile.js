@@ -12,7 +12,7 @@ const path = {
   src: {
     html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
     css: source_folder + "/scss/style.scss",
-    js: source_folder + "/js/script.js",
+    js: source_folder + "/js/**/*.js",
     img: source_folder + "/img/**/*.+(png|jpg|gif|ico|svg|webp|mp4)",
     fonts: source_folder + "/fonts/**/*.*",
   },
@@ -94,17 +94,19 @@ function css() {
 }
 
 function js() {
-  return src(path.src.js)
-    .pipe(fileInclude())
-    .pipe(dest(path.build.js))
-    .pipe(uglify())
-    .pipe(
+  return (
+    src(path.src.js)
+      //.pipe(fileInclude())
+      //.pipe(dest(path.build.js))
+      //.pipe(uglify())
+      /* .pipe(
       rename({
         extname: ".min.js",
       })
-    )
-    .pipe(dest(path.build.js))
-    .pipe(browsersync.stream());
+    ) */
+      .pipe(dest(path.build.js))
+      .pipe(browsersync.stream())
+  );
 }
 function images() {
   return src(path.src.img)

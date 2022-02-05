@@ -1,0 +1,20 @@
+.product {
+  padding: 100px 0 80px 0;
+
+  min-height: 825px;
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__right {
+    max-width: 703px;
+    margin-bottom: 182px;
+  }
+  &__text {
+    font-weight: 300;
+    font-size: 100px;
+    line-height: 86%;
+    text-indent: 229px;
+    color: #ffffff;
+    max-width: 1000px;
+  }
+}

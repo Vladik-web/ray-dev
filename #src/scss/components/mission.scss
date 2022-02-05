@@ -1,0 +1,25 @@
+.mission {
+  padding-top: 65px;
+  padding-bottom: 158px;
+
+  min-height: 825px;
+  &__grid-link {
+    grid-column: 1/3;
+  }
+  &__right {
+    max-width: 703px;
+    margin-bottom: 158px;
+  }
+  &__block {
+    max-width: 703px;
+    grid-column: 3/-1;
+  }
+  &__title {
+    margin-bottom: 75px;
+  }
+  &__content {
+    & > p + p {
+      margin-top: 25px;
+    }
+  }
+}
