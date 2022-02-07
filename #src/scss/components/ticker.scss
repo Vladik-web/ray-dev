@@ -8,6 +8,7 @@
     color: #ffffff;
     margin-bottom: 12px;
   }
+
   span {
     white-space: nowrap;
     font-weight: 300;
@@ -18,5 +19,21 @@
   }
   &-last {
     padding-bottom: 104px;
+  }
+  h2.ticker-last__head {
+    margin-bottom: 64px;
+  }
+}
+@media (max-width: 1439px) {
+  .ticker {
+    padding-bottom: 0;
+    h2 {
+      font-size: 80px;
+      line-height: 76.5%;
+    }
+    span {
+      font-size: 40px;
+      line-height: 96%;
+    }
   }
 }

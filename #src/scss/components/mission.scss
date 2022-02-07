@@ -1,6 +1,5 @@
 .mission {
   padding-top: 65px;
-  padding-bottom: 158px;
 
   min-height: 825px;
   &__grid-link {
@@ -20,6 +19,19 @@
   &__content {
     & > p + p {
       margin-top: 25px;
+    }
+  }
+}
+@media (max-width: 1439px) {
+  .mission {
+    min-height: 762px;
+
+    &__title {
+      margin-bottom: 55px;
+    }
+    &__right {
+      max-width: 478px;
+      margin-bottom: 179px;
     }
   }
 }

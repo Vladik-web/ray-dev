@@ -2,10 +2,8 @@
   padding: 75px 0 54px 0;
 
   min-height: 825px;
-  &__grid {
-  }
-  &__grid-link {
-  }
+  position: relative;
+
   &__about {
     margin-top: 159px;
   }
@@ -24,9 +22,44 @@
     color: #ffffff;
     margin-bottom: 50px;
   }
-  &__right {
-  }
+
   &__head {
     margin-bottom: 40px;
+  }
+  &__navigation {
+    width: calc(100% - 70px);
+    position: absolute;
+    top: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 1439px) {
+  .team {
+    min-height: auto;
+    padding-top: 0;
+    padding-bottom: 74px;
+    &__head {
+      margin-bottom: 80px;
+    }
+    /* Временно */
+    &__slider {
+      img {
+        width: 100%;
+      }
+    }
+    &__about-name {
+      font-weight: 300;
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+    &__about-work {
+      font-size: 15px;
+      line-height: 120%;
+      margin-bottom: 40px;
+    }
+    &__navigation {
+      display: none;
+    }
   }
 }

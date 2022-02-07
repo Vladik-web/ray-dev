@@ -31,7 +31,7 @@
     }
   }
   &__meeting-link {
-    padding: 7px 24px 4px 24px;
+    padding: 7px 24px 7px 24px;
     border: 1px solid $accent;
     box-sizing: border-box;
     border-radius: 20px;
@@ -64,22 +64,3 @@
     }
   }
 }
-.container {
-}
-.active {
-}
-/* &::before {
-      content: "";
-      position: absolute;
-      left: 77px;
-      top: -7px;
-      width: 15px;
-      height: 40px;
-      border-radius: 80%;
-      background-color: #fff;
-      filter: blur(2px); 
-
-      cursor: pointer;
-
-      transform: rotate(25deg);
-    } */

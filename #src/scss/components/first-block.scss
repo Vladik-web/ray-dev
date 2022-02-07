@@ -27,3 +27,19 @@
     color: #ffffff;
   }
 }
+
+@media (max-width: 1439px) {
+  .first-block {
+    &__text {
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 21px;
+      max-width: 238px;
+    }
+    &__spin {
+      font-weight: 300;
+      font-size: 62px;
+      line-height: 76px;
+    }
+  }
+}

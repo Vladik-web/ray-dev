@@ -109,28 +109,30 @@ function js() {
   );
 }
 function images() {
-  return src(path.src.img)
-    .pipe(
+  return (
+    /*src(path.src.img)
+       .pipe(
       webp({
         quality: 80,
       })
-    )
-    .pipe(dest(path.build.img))
-    .pipe(src(path.src.img))
-    .pipe(
-      imagemin({
-        pngquant: true,
-        optipng: false,
-        zopflipng: true,
-        jpegRecompress: false,
-        mozjpeg: true,
-        gifsicle: true,
-        svgo: true,
-        concurrent: 7,
-      })
-    )
-    .pipe(dest(path.build.img))
-    .pipe(browsersync.stream());
+    ) 
+      .pipe(dest(path.build.img))*/
+    src(path.src.img)
+      .pipe(
+        imagemin({
+          pngquant: true,
+          optipng: false,
+          zopflipng: true,
+          jpegRecompress: false,
+          mozjpeg: true,
+          gifsicle: true,
+          svgo: true,
+          concurrent: 7,
+        })
+      )
+      .pipe(dest(path.build.img))
+      .pipe(browsersync.stream())
+  );
 }
 
 function fonts() {

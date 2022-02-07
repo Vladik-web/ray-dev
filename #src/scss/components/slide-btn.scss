@@ -1,0 +1,28 @@
+.slide-btn {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid $accent;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  transition: 0.25s ease;
+  svg path {
+    transition: 0.25s ease;
+  }
+  &:hover {
+    img {
+      filter: blur(1px);
+    }
+  }
+  &[aria-disabled="true"] {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

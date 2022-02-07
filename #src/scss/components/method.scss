@@ -17,6 +17,7 @@
   &__right {
   }
   &__text-big {
+    max-width: fit-content;
     margin: 50px 0 90px 0;
     font-style: normal;
     font-weight: 300;
@@ -24,6 +25,14 @@
     line-height: 94.5%;
 
     color: #ffffff;
+    position: relative;
+    &::after {
+      content: "*";
+      position: absolute;
+      top: 0;
+      font-size: 196px;
+      right: -100px;
+    }
   }
   &__descr {
     max-width: 688px;
@@ -39,5 +48,34 @@
 
     color: #fff;
     text-indent: 100px;
+  }
+}
+@media (max-width: 1439px) {
+  .method {
+    min-height: auto;
+    padding-bottom: 20px;
+    &__text-big {
+      font-weight: 300;
+      font-size: 100px;
+      line-height: 94.5%;
+      margin-top: 0;
+      margin-bottom: 52px;
+      &::after {
+        top: -50px;
+      }
+    }
+    &__descr {
+      max-width: 480px;
+      margin-bottom: 131px;
+    }
+    &__innovation {
+      font-size: 15px;
+      line-height: 120%;
+    }
+    & > img {
+      left: 0;
+      width: 1305px;
+      height: 974px;
+    }
   }
 }

@@ -5,6 +5,7 @@ body {
   font-family: "HeliosExtLightC";
   background-color: $bg;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 a {
   color: inherit;
@@ -25,6 +26,11 @@ a {
   &::first-letter {
     text-transform: uppercase;
   }
+  @media (max-width: 1439px) {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
 .fixed-link-once {
   position: absolute;
@@ -37,6 +43,13 @@ a {
   line-height: 100%;
   text-indent: 226px;
   color: #ffffff;
+
+  @media (max-width: 1439px) {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 100%;
+    text-indent: 226px;
+  }
 }
 .content {
   font-weight: 300;
@@ -44,7 +57,7 @@ a {
   line-height: 120%;
   color: #ffffff;
 }
-main {
+.wrapper {
   position: relative;
   height: fit-content;
   &::before {
@@ -68,10 +81,18 @@ main {
   line-height: 94.5%;
 
   color: #ffffff;
+  @media (max-width: 1439px) {
+    font-size: 80px;
+    line-height: 94.5%;
+  }
 }
 .descr {
   font-weight: 300;
   font-size: 18px;
   line-height: 120%;
   color: #ffffff;
+  @media (max-width: 1439px) {
+    font-size: 15px;
+    line-height: 120%;
+  }
 }

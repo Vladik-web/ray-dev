@@ -1,10 +1,11 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 549px;
+  max-width: 549px;
   margin-right: 0;
   margin-left: auto;
   input {
+    box-sizing: border-box;
     font-family: "HeliosExtLightC";
     outline: none;
     border: none;
@@ -52,6 +53,13 @@
     color: #ffffff;
     &:hover {
       background-color: #0048ff;
+    }
+  }
+}
+@media (max-width: 1439px) {
+  .form {
+    button[type="submit"] {
+      font-size: 13px;
     }
   }
 }

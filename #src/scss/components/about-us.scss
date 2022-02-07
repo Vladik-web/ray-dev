@@ -10,7 +10,6 @@
     max-width: 703px;
   }
   &__content {
-    margin-bottom: 213px;
   }
   &__text {
     grid-column: 2/-1;
@@ -25,5 +24,21 @@
   }
   &__right {
     max-width: 703px;
+    margin-bottom: 213px;
+  }
+}
+@media (max-width: 1439px) {
+  .about-us {
+    min-height: auto;
+    padding-top: 56px;
+    padding-bottom: 134px;
+    &__right {
+      max-width: 478px;
+      margin-bottom: 91px;
+    }
+    &__text {
+      max-width: 600px;
+      font-size: 50px;
+    }
   }
 }

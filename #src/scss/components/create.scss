@@ -42,3 +42,24 @@
     }
   }
 }
+@media (max-width: 1439px) {
+  .create {
+    padding-bottom: 122px;
+    &__wrapper {
+      padding: 40px 0 80px 0;
+    }
+    &__link-big {
+      width: 380px;
+      height: 380px;
+    }
+    &__form-left {
+      h3 {
+        font-size: 40px;
+        line-height: 100%;
+      }
+    }
+    &__form-right {
+      margin-left: 40px;
+    }
+  }
+}
