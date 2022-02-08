@@ -63,3 +63,36 @@
     }
   }
 }
+@media (max-width: 767px) {
+  .team {
+    padding-top: 65px;
+    &__head {
+      margin-bottom: 49px;
+    }
+    &__grid {
+      display: flex;
+      flex-direction: column;
+      &-link {
+        order: 2;
+      }
+    }
+    &__right {
+      order: 1;
+    }
+    &__about {
+      margin-top: 45px;
+      &-name {
+        font-size: 24px;
+        line-height: 100%;
+        margin-bottom: 21px;
+      }
+      &-work {
+        font-size: 10px;
+        line-height: 120%;
+      }
+    }
+    .fixed-link-once {
+      display: none;
+    }
+  }
+}

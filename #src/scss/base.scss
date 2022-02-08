@@ -4,7 +4,7 @@
 body {
   font-family: "HeliosExtLightC";
   background-color: $bg;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   scroll-behavior: smooth;
 }
 a {
@@ -16,6 +16,9 @@ a {
 .container {
   padding: 0 35px;
   position: relative;
+  @media (max-width: 767px) {
+    padding: 0 21px;
+  }
 }
 .fixed-link {
   font-weight: 300;
@@ -30,6 +33,11 @@ a {
     font-weight: 300;
     font-size: 15px;
     line-height: 18px;
+  }
+  @media (max-width: 767px) {
+    font-size: 7px;
+    line-height: 120%;
+    left: 21px;
   }
 }
 .fixed-link-once {
@@ -50,6 +58,12 @@ a {
     line-height: 100%;
     text-indent: 226px;
   }
+  @media (max-width: 767px) {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 100%;
+    text-indent: 100px;
+  }
 }
 .content {
   font-weight: 300;
@@ -68,10 +82,10 @@ a {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 100%;
+    //width: 100%;
     //width: 1389px;
-    height: 2096px;
-    background: url(../img/Fon_section.png) no-repeat right;
+    //height: 2096px;
+    //background: url(../img/Fon_section.png) no-repeat right;
   }
 }
 .head {
@@ -85,6 +99,10 @@ a {
     font-size: 80px;
     line-height: 94.5%;
   }
+  @media (max-width: 767px) {
+    font-size: 34px;
+    line-height: 100%;
+  }
 }
 .descr {
   font-weight: 300;
@@ -93,6 +111,10 @@ a {
   color: #ffffff;
   @media (max-width: 1439px) {
     font-size: 15px;
+    line-height: 120%;
+  }
+  @media (max-width: 767px) {
+    font-size: 13px;
     line-height: 120%;
   }
 }

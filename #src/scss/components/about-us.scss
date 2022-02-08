@@ -13,7 +13,7 @@
   }
   &__text {
     grid-column: 2/-1;
-    font-weight: 300;
+
     font-size: 60px;
     line-height: 100%;
     max-width: 1024px;
@@ -39,6 +39,18 @@
     &__text {
       max-width: 600px;
       font-size: 50px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .about-us {
+    padding-bottom: 0;
+    &__right {
+      margin-bottom: 40px;
+    }
+    &__text {
+      font-size: 34px;
+      line-height: 100%;
     }
   }
 }

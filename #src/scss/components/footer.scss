@@ -22,10 +22,36 @@
     color: #707070;
   }
   &__cop {
+    display: flex;
+    align-items: center;
+
     font-weight: 300;
     font-size: 15px;
     line-height: 120%;
 
     color: #707070;
+    img {
+      margin-right: 13px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    padding-bottom: 81px;
+    &__link {
+      font-size: 10px;
+    }
+    &__cop {
+      font-size: 10px;
+      line-height: 120%;
+      img {
+        margin-right: 7px;
+      }
+    }
+    &__item {
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
   }
 }

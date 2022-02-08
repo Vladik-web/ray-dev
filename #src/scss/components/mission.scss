@@ -35,3 +35,21 @@
     }
   }
 }
+@media (max-width: 767px) {
+  .mission {
+    min-height: auto;
+    padding-top: 40px;
+    &__right {
+      max-width: 100%;
+      margin-bottom: 154px;
+    }
+    &__title {
+      margin-bottom: 64px;
+    }
+    &__content {
+      & > p + p {
+        margin-top: 20px;
+      }
+    }
+  }
+}

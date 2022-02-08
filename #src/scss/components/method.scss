@@ -79,3 +79,56 @@
     }
   }
 }
+@media (max-width: 1023px) {
+  .method {
+    overflow: hidden;
+    max-height: 825px;
+
+    & > img {
+      top: 0px;
+      width: 100%;
+      height: 100%;
+    }
+    &__text-big {
+      &::after {
+        top: 0;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .method {
+    min-height: 600px;
+    height: auto;
+    & > img {
+      left: -50px;
+      top: -10px;
+      width: 725px;
+      height: 542px;
+    }
+    &__text-big {
+      font-size: 50px;
+      line-height: 94.5%;
+      text-indent: 50px;
+      margin-bottom: 56px;
+
+      &::after {
+        font-size: 50px;
+        top: 0;
+        right: -25px;
+      }
+    }
+    &__descr {
+      max-width: 100%;
+      font-size: 13px;
+      line-height: 120%;
+      text-indent: 50px;
+      margin-bottom: 231px;
+    }
+    &__innovation {
+      font-size: 13px;
+      line-height: 120%;
+      text-indent: 50px;
+    }
+  }
+}

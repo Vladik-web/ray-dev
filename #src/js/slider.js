@@ -12,7 +12,7 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".swiper-prev",
   },
   breakpoints: {
-    0: { allowTouchMove: true },
+    0: { allowTouchMove: true, spaceBetween: 1000 },
     1439: { allowTouchMove: false },
   },
 });

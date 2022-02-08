@@ -140,3 +140,11 @@ btns.addEventListener("click", (e) => {
     animateFadeOutBottom(".slider", ".slider__head > *");
   } else return;
 });
+
+const fixedLink = document.querySelectorAll(".fixed-link-once");
+const fixed = document.querySelectorAll(".fixed-link:not(.fixed-link-once)");
+const mass = [];
+
+fixedLink.forEach((item) => {
+  mass.push(item.getBoundingClientRect());
+});

@@ -39,3 +39,19 @@
     }
   }
 }
+@media (max-width: 767px) {
+  .product {
+    min-height: auto;
+    &__title {
+      margin-bottom: 68px;
+    }
+    &__text {
+      font-size: 30px;
+      line-height: 86%;
+      text-indent: 0;
+    }
+    &__right {
+      margin-bottom: 134px;
+    }
+  }
+}

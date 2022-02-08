@@ -1,5 +1,6 @@
 .ticker {
   padding-bottom: 89px;
+  overflow: hidden;
   h2 {
     font-weight: 300;
     font-size: 100px;
@@ -34,6 +35,23 @@
     span {
       font-size: 40px;
       line-height: 96%;
+    }
+  }
+}
+@media (max-width: 1439px) {
+  .ticker {
+    h2 {
+      font-size: 34px;
+    }
+    span {
+      display: none;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .ticker {
+    h2.ticker-last__head {
+      margin-bottom: 43px;
     }
   }
 }
