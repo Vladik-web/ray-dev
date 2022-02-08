@@ -1,11 +1,11 @@
-:root {
-  --app-height: 100%;
-}
 body {
   font-family: "HeliosExtLightC";
   background-color: $bg;
   overflow-x: hidden !important;
   scroll-behavior: smooth;
+  &.overflow {
+    overflow: hidden;
+  }
 }
 a {
   color: inherit;

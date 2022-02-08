@@ -2,8 +2,7 @@
   padding-top: 35px;
   margin-bottom: 54px;
   min-height: 825px;
-  height: var(--app-height);
-
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -61,7 +60,7 @@
       font-size: 10px;
       line-height: 16px;
 
-      align-self: end;
+      align-self: flex-end;
       span {
         margin-left: 0;
         margin-right: auto;

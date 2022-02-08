@@ -1,5 +1,5 @@
-/* let wrapper = document.querySelector(".ticker"),
-  marquee = document.querySelector(".ticker"),
+let wrapper = document.querySelector(".ticker"),
+  marquee = document.querySelector(".ticker__inner"),
   wrapperWidth = wrapper.offsetWidth,
   marqueeWidth = marquee.scrollWidth;
 
@@ -16,28 +16,4 @@ function move() {
     marquee.style.transform = "translateX(" + currentTX + "px)";
   }
 }
-let interval = setInterval(move, 10);
- */
-
-function initMarqueeText() {
-  const marquees = document.querySelectorAll(".marquee");
-  marquees.forEach((marquee) => {
-    const itemEls = marquee.querySelectorAll(".item");
-    itemEls.forEach((itemEl) => {
-      const word = itemEl.getAttribute("data-word");
-      const number = itemEl.getAttribute("data-number");
-      for (let i = 0; i < word.length; i++) {
-        const letterEl = document.createElement("span");
-        letterEl.className = "letter";
-        letterEl.innerHTML = word[i];
-        itemEl.appendChild(letterEl);
-      }
-      const numberEl = document.createElement("span");
-      numberEl.classList.add("number", "letter");
-      numberEl.innerHTML = `<p>${number}</p><p>X</p>`;
-      itemEl.appendChild(numberEl);
-    });
-  });
-}
-
-//initMarqueeText();
+let interval = setInterval(move, 0.2);
