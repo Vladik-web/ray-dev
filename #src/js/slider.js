@@ -31,10 +31,10 @@ const swiperGall = new Swiper(".swiper-gallery", {
   /*  allowTouchMove: false, */
   effect: "cards",
   grabCursor: true,
-  slidesPerView: 1,
+  allowTouchMove: false,
   navigation: {
-    nextEl: ".swiper-next",
-    prevEl: ".swiper-prev",
+    nextEl: ".team__navigation .swiper-next",
+    prevEl: ".team__navigation .swiper-prev",
   },
   pagination: {
     el: ".line--little",
@@ -43,5 +43,10 @@ const swiperGall = new Swiper(".swiper-gallery", {
 
   thumbs: {
     swiper: swiperContent,
+  },
+  on: {
+    click(swiper) {
+      swiper.slideTo(swiper.clickedIndex);
+    },
   },
 });

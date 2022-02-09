@@ -124,27 +124,51 @@ const resetParallax = ($event) => {
   gsap.to(el, { x: 0, y: 0, scale: 1 });
   gsap.to(el.children, { x: 0, y: 0 });
 };
-const animateFadeOutBottom = (el, items) => {
+const animateFadeOutBottom = (el, items, height, time) => {
   const tl = gsap.timeline({
-    duration: 0.2,
+    duration: time ? time : 0.5,
+    ease: "easeOut",
   });
-  gsap.set(items, { opacity: 0 });
-  tl.fromTo(items, { y: 20, opacity: 0 }, { y: 0, opacity: 1 });
+  gsap.set(items, {});
+  tl.fromTo(
+    items,
+    {
+      y: height ? height : 70,
+    },
+    { y: 0, stagger: 0.2 }
+  );
   scrollTriggerInstance(el, tl);
   return tl;
 };
-const btns = document.querySelector(".swiper-arrows");
-btns.addEventListener("click", (e) => {
-  const target = e.target.closest("BUTTON");
-  if (target) {
-    animateFadeOutBottom(".slider", ".slider__head > *");
-  } else return;
+
+animateFadeOutBottom(".mission", ".mission .title div *");
+animateFadeOutBottom(".about-us", ".about-us .title div *");
+animateFadeOutBottom(".product", ".product .title div *");
+animateFadeOutBottom(".applying", ".applying .title div *");
+animateFadeOutBottom(".applying", ".applying__number span");
+animateFadeOutBottom(".method__text-big", ".method__text-big span", 184);
+
+animateFadeOutBottom(".swiper-slide-active", ".slider__head div *", 200, 0);
+swiper.on("slideChange", function () {
+  animateFadeOutBottom(
+    ".swiper-slide-active",
+    ".slider__head div *",
+    document.querySelector(".swiper-slide-active .slider__head div ")
+      .offsetHeight,
+    0.5
+  );
 });
 
-const fixedLink = document.querySelectorAll(".fixed-link-once");
-const fixed = document.querySelectorAll(".fixed-link:not(.fixed-link-once)");
-const mass = [];
+/* Плавный скролл к якорям */
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+  smoothLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    const id = smoothLink.getAttribute("href");
 
-fixedLink.forEach((item) => {
-  mass.push(item.getBoundingClientRect());
-});
+    document.querySelector(id).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+}

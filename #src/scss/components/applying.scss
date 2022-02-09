@@ -19,6 +19,8 @@
   }
   &__item {
     max-width: 300px;
+    display: flex;
+    flex-direction: column;
     & > .descr {
       text-indent: 100px;
       max-width: 300px;
@@ -28,8 +30,13 @@
     font-weight: 300;
     font-size: 60px;
     line-height: 80%;
-
+    overflow: hidden;
     color: #ffffff;
+
+    & > span {
+      display: block;
+      z-index: -1;
+    }
   }
   &__text {
     grid-column: 2/-1;
@@ -120,6 +127,10 @@
       display: block;
       margin-left: 52px;
       margin-bottom: 15px;
+      height: 26px;
+      & > span {
+        z-index: -1;
+      }
     }
     &__text {
       span {

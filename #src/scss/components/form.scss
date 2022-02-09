@@ -95,6 +95,8 @@
     &__field {
       margin-bottom: 66px;
       input {
+        /* для safari */
+        border-radius: 0 !important;
         font-size: 10px;
       }
       & > input + input {

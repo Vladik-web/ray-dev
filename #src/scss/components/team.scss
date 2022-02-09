@@ -25,8 +25,10 @@
 
   &__head {
     margin-bottom: 80px;
+    overflow: hidden;
   }
   &__navigation {
+    z-index: 1000;
     width: calc(100% - 70px);
     position: absolute;
     top: 70%;
@@ -43,11 +45,7 @@
       margin-bottom: 80px;
     }
     /* Временно */
-    &__slider {
-      img {
-        width: 100%;
-      }
-    }
+
     &__about-name {
       font-weight: 300;
       font-size: 30px;

@@ -49,20 +49,39 @@ a {
   font-weight: 300;
   font-size: 60px;
   line-height: 100%;
-  text-indent: 226px;
+
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  & div {
+    overflow: hidden;
+    height: 65px;
+  }
+  & div > span {
+    display: block;
+  }
+  div:first-child > span {
+    text-indent: 226px;
+  }
 
   @media (max-width: 1439px) {
     font-weight: 300;
     font-size: 40px;
     line-height: 100%;
-    text-indent: 226px;
+    & div {
+      height: 44px;
+    }
   }
   @media (max-width: 767px) {
     font-weight: 300;
     font-size: 24px;
     line-height: 100%;
-    text-indent: 100px;
+    & div {
+      height: 24px;
+    }
+    div:first-child > span {
+      text-indent: 100px;
+    }
   }
 }
 .content {
@@ -82,10 +101,10 @@ a {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    //width: 100%;
-    //width: 1389px;
-    //height: 2096px;
-    //background: url(../img/Fon_section.png) no-repeat right;
+    width: 100%;
+    width: 1389px;
+    height: 2096px;
+    background: url(../img/Fon_section.png) no-repeat right;
   }
 }
 .head {
