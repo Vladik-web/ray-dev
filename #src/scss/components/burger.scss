@@ -1,5 +1,6 @@
 .header .menu-wrapper {
   display: none;
+  z-index: 100;
   width: 26px;
   height: 11px;
   cursor: pointer;
@@ -113,15 +114,15 @@
   bottom: 0;
   left: 0;
   background-color: $bg;
-  height: calc(var(--app-height) - 70px);
+  height: 100vh;
   &__inner {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(var(--app-height) - 70px);
+    height: 100vh;
   }
   &__list {
-    margin-top: 38px;
+    margin-top: 103px;
     li {
       a {
         font-weight: 300;

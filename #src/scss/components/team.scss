@@ -7,6 +7,15 @@
   &__about {
     margin-top: 159px;
   }
+  .container {
+    padding-right: 0;
+  }
+  &__slider {
+    max-height: 600px !important;
+  }
+  &__right {
+    overflow: hidden;
+  }
   &__about-name {
     font-weight: 300;
     font-size: 45px;
@@ -31,7 +40,8 @@
     z-index: 1000;
     width: calc(100% - 70px);
     position: absolute;
-    top: 70%;
+    top: 80%;
+
     display: flex;
     justify-content: space-between;
   }
@@ -58,6 +68,11 @@
     }
     &__navigation {
       display: none;
+    }
+    .swiper-slide {
+      img {
+        width: 280px;
+      }
     }
   }
 }
@@ -91,6 +106,28 @@
     }
     .fixed-link-once {
       display: none;
+    }
+    .line--little {
+      top: 630px !important;
+      left: 21px !important;
+      width: calc(100% - 42px) !important;
+    }
+  }
+}
+.team__grid {
+  .swiper-wrapper {
+    min-height: auto;
+  }
+}
+@media (max-width: 424px) {
+  .team {
+    .swiper-slide {
+      img {
+        width: 156px;
+      }
+    }
+    .line--little {
+      top: 470px !important;
     }
   }
 }

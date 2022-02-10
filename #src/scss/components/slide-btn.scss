@@ -21,8 +21,12 @@
       filter: blur(1px);
     }
   }
-  &[aria-disabled="true"] {
-    opacity: 0;
-    visibility: hidden;
+}
+.slider {
+  .slide-btn {
+    &[aria-disabled="true"] {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 }

@@ -17,6 +17,11 @@
     max-width: 308px;
     margin: auto 0 70px auto;
     color: #fff;
+    span {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 21px;
+    }
   }
   &__spin {
     font-weight: 300;
@@ -24,6 +29,13 @@
     line-height: 106px;
     text-align: center;
     color: #ffffff;
+  }
+  #waves {
+    z-index: -1;
+    position: absolute;
+    height: var(--app-height);
+    top: 0;
+    left: 0;
   }
 }
 

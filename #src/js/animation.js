@@ -140,6 +140,24 @@ const animateFadeOutBottom = (el, items, height, time) => {
   scrollTriggerInstance(el, tl);
   return tl;
 };
+const animateSlider = (el, items) => {
+  const tl = gsap.timeline({
+    duration: 0,
+    ease: "easeOut",
+  });
+  gsap.set(items, {});
+  tl.fromTo(
+    items,
+    {
+      y: 70,
+      width: 100,
+      scale: 0.9,
+    },
+    { y: 0, scale: 1, stagger: 0.2 }
+  );
+  scrollTriggerInstance(el, tl);
+  return tl;
+};
 
 animateFadeOutBottom(".mission", ".mission .title div *");
 animateFadeOutBottom(".about-us", ".about-us .title div *");
@@ -149,15 +167,6 @@ animateFadeOutBottom(".applying", ".applying__number span");
 animateFadeOutBottom(".method__text-big", ".method__text-big span", 184);
 
 animateFadeOutBottom(".swiper-slide-active", ".slider__head div *", 200, 0);
-swiper.on("slideChange", function () {
-  animateFadeOutBottom(
-    ".swiper-slide-active",
-    ".slider__head div *",
-    document.querySelector(".swiper-slide-active .slider__head div ")
-      .offsetHeight,
-    0.5
-  );
-});
 
 /* Плавный скролл к якорям */
 const smoothLinks = document.querySelectorAll('a[href^="#"]');

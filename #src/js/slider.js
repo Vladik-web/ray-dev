@@ -16,22 +16,24 @@ const swiper = new Swiper(".swiper-fig", {
 });
 
 const swiperContent = new Swiper(".swiper-content", {
-  /*  allowTouchMove: false, */
+  allowTouchMove: false,
   spaceBetween: 20,
 
   navigation: {
     nextEl: ".swiper-next",
     prevEl: ".swiper-prev",
   },
-  freeMode: true,
+  loop: true,
+  speed: 700,
   watchSlidesProgress: true,
 });
 
 const swiperGall = new Swiper(".swiper-gallery", {
-  /*  allowTouchMove: false, */
-  effect: "cards",
-  grabCursor: true,
   allowTouchMove: false,
+  slidesPerView: 4,
+
+  speed: 700,
+  loop: true,
   navigation: {
     nextEl: ".team__navigation .swiper-next",
     prevEl: ".team__navigation .swiper-prev",
@@ -40,13 +42,12 @@ const swiperGall = new Swiper(".swiper-gallery", {
     el: ".line--little",
     type: "progressbar",
   },
-
+  slideToClickedSlide: true,
   thumbs: {
     swiper: swiperContent,
   },
-  on: {
-    click(swiper) {
-      swiper.slideTo(swiper.clickedIndex);
-    },
+  breakpoints: {
+    0: { slidesPerView: 3, slideToClickedSlide: false, allowTouchMove: true },
+    767: { slidesPerView: 4, allowTouchMove: false, slideToClickedSlide: true },
   },
 });
