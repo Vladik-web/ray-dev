@@ -98,12 +98,13 @@ function js() {
     src(path.src.js)
       //.pipe(fileInclude())
       //.pipe(dest(path.build.js))
-      //.pipe(uglify())
+      //
       /* .pipe(
       rename({
         extname: ".min.js",
       })
     ) */
+      .pipe(uglify())
       .pipe(dest(path.build.js))
       .pipe(browsersync.stream())
   );

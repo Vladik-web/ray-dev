@@ -20,16 +20,16 @@ check();
 function check() {
   if (window.innerWidth > 767) {
     onceMass.forEach((item) => {
-      item.style.opacity = "0";
+      item.style.display = "none";
     });
     window.addEventListener("scroll", function () {
       for (let i = 0; i < onceMass.length; i++) {
         if (this.scrollY + cordFixed[i] > cordOnce[i]) {
-          onceMass[i].style.opacity = "1";
-          cordFixedMass[i].style.opacity = "0";
+          onceMass[i].style.display = "block";
+          cordFixedMass[i].style.display = "none";
         } else if (this.scrollY + cordFixed[i] < cordOnce[i]) {
-          onceMass[i].style.opacity = "0";
-          cordFixedMass[i].style.opacity = "1";
+          onceMass[i].style.display = "none";
+          cordFixedMass[i].style.display = "block";
         }
       }
     });

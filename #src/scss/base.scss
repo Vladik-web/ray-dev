@@ -4,8 +4,8 @@ html {
 body {
   font-family: "HeliosExtLightC";
   background-color: $bg;
-  overflow-x: hidden !important;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
+
   &.overflow {
     overflow: hidden;
   }

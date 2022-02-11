@@ -335,8 +335,10 @@
         transform: rotate(8deg);
       }
     }
-    &:hover {
-      z-index: 100000;
+    @media (hover: hover) {
+      &:hover {
+        z-index: 10000 !important;
+      }
     }
   }
 }
