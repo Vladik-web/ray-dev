@@ -45,6 +45,9 @@
     display: flex;
     justify-content: space-between;
   }
+  &__grid-link {
+    margin-right: 15px;
+  }
 }
 @media (max-width: 1439px) {
   .team {
@@ -108,9 +111,14 @@
       display: none;
     }
     .line--little {
-      top: 630px !important;
+      top: 530px !important;
       left: 21px !important;
       width: calc(100% - 42px) !important;
+    }
+    .swiper-slide {
+      img {
+        width: 200px;
+      }
     }
   }
 }
@@ -121,13 +129,13 @@
 }
 @media (max-width: 424px) {
   .team {
+    .line--little {
+      top: 470px !important;
+    }
     .swiper-slide {
       img {
         width: 156px;
       }
-    }
-    .line--little {
-      top: 470px !important;
     }
   }
 }

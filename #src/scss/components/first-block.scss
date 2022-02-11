@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
   &__navigation {
     z-index: 100;
     position: fixed;
@@ -33,8 +34,8 @@
   #waves {
     z-index: -1;
     position: absolute;
-    height: var(--app-height);
-    top: 0;
+    height: calc(100vh + 80px);
+    top: -50px;
     left: 0;
   }
 }
@@ -68,9 +69,6 @@
       width: 50%;
       margin: 0;
       margin-bottom: 24px;
-      font-weight: 300;
-      font-size: 10px;
-      line-height: 16px;
 
       align-self: flex-end;
       span {
@@ -78,6 +76,9 @@
         margin-right: auto;
         display: block;
         max-width: 139px;
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 16px;
       }
     }
     &__navigation {

@@ -48,6 +48,6 @@ const swiperGall = new Swiper(".swiper-gallery", {
   },
   breakpoints: {
     0: { slidesPerView: 3, slideToClickedSlide: false, allowTouchMove: true },
-    767: { slidesPerView: 4, allowTouchMove: false, slideToClickedSlide: true },
+    768: { slidesPerView: 4, allowTouchMove: false, slideToClickedSlide: true },
   },
 });

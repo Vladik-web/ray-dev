@@ -114,24 +114,21 @@ ClassicalNoise.prototype.noise = function (x, y, z) {
 var canvas = document.getElementById("waves"),
   ctx = canvas.getContext("2d"),
   perlin = new ClassicalNoise(),
-  // variation = .002,
-  variation = 0.0006,
-  // amp       = 200,
-  amp = 400,
-  maxLines = 100,
+  variation = 0.001,
+  amp = window.innerWidth <= 767 ? 100 : 400,
+  maxLines = 20,
   variators = [],
   canvasWidth,
   canvasHeight,
-  startY,
   startY;
 
-for (var i = 0, u = 0; i < maxLines; i++, u += 0.032) {
+for (var i = 0, u = 0; i < maxLines; i++, u += 0.05) {
   variators[i] = u;
 }
 
 function draw() {
   // ctx.shadowColor = "rgba(42,52,84,1)";
-  ctx.lineWidth = 30;
+  ctx.lineWidth = window.innerWidth <= 767 ? 100 : 300;
 
   for (var i = 0; i <= maxLines; i++) {
     ctx.beginPath();
@@ -145,7 +142,7 @@ function draw() {
     ctx.stroke();
     ctx.closePath();
 
-    variators[i] += 0.06;
+    variators[i] += 0.006;
     // variators[i] += .02;
   }
 }
@@ -163,7 +160,8 @@ function animate() {
 }
 
 function resizeCanvas() {
-  (canvasWidth = document.documentElement.clientWidth / 2.5),
+  (canvasWidth =
+    document.documentElement.clientWidth / (window.innerWidth <= 767 ? 3 : 2)),
     (canvasHeight = document.documentElement.clientHeight);
 
   canvas.setAttribute("width", canvasWidth);

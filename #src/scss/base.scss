@@ -1,3 +1,6 @@
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: "HeliosExtLightC";
   background-color: $bg;
@@ -104,7 +107,14 @@ a {
     width: 100%;
     width: 1389px;
     height: 2096px;
-    background: url(../img/Fon_section.png) no-repeat right;
+    background: url(../img/Fon_section.png) no-repeat right / cover;
+    @media (max-width: 767px) {
+      top: -20px;
+      background: url(../img/Fon_section.png) no-repeat right / contain;
+      transform: translateY(0);
+      width: 600px;
+      height: 600px;
+    }
   }
 }
 .head {
