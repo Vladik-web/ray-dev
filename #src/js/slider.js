@@ -13,6 +13,11 @@ const swiper = new Swiper(".swiper-fig", {
     0: { allowTouchMove: true, spaceBetween: 1000 },
     1439: { allowTouchMove: false },
   },
+  on: {
+    slideChange(swiper) {
+      animateFadeOutBottom(swiper.$wrapperEl, ".slider__head div span", 200, 0);
+    },
+  },
 });
 
 const swiperContent = new Swiper(".swiper-content", {

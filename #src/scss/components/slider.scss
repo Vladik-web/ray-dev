@@ -14,6 +14,8 @@
     grid-template-rows: 200px auto;
   }
   &__link {
+    z-index: 10;
+    position: relative;
     font-weight: 300;
     font-size: 18px;
     line-height: 22px;
@@ -24,6 +26,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    z-index: 10;
 
     &::before {
       content: attr(data-number);
@@ -69,14 +72,27 @@
     background-color: $accent;
     height: 100%;
     position: relative;
-    z-index: -1;
+    z-index: 5;
     transition: 0.25s ease;
     box-shadow: 50px -20px 50px 0 $accent;
+    @media (hover: hover) {
+      &:hover {
+        &.circle,
+        &.rhombus,
+        &.circle-1,
+        &.circle-2,
+        &.circle-3 {
+          filter: blur(20px);
+        }
+      }
+    }
+
     &.circle {
       position: absolute;
       top: 0;
       left: 20%;
       border-radius: 50%;
+
       &.circle-1 {
         box-shadow: 0 -30px 50px 50px $accent;
         width: 450px;
@@ -221,8 +237,10 @@
       margin-bottom: 29px;
     }
     &__descr {
+      position: relative;
       text-indent: 50px;
       max-width: 277px;
+      z-index: 20;
     }
   }
   .swiper {
@@ -238,6 +256,7 @@
         top: -180px;
         width: 495px;
         height: 495px;
+
         &.circle-1 {
           left: 0;
           top: -188px;
@@ -257,7 +276,7 @@
         width: 450px;
         height: 450px;
         left: 170px;
-        top: -150px;
+        top: -180px;
       }
     }
     .line {
